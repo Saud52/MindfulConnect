@@ -8,6 +8,3 @@ Features include DASS-21 assessments, chatbot support, and appointment booking.
 - Backend: Node.js, Express
 - Database: MongoDB
 
-## Contributors
-- Saud52
-- [Your teammate's name]
