@@ -1,0 +1,168 @@
+/* frontend/src/index.css - Professional Pastel Purple & White Theme */
+
+/* Define a consistent color palette using CSS variables */
+:root {
+  --color-primary: #A188ED;   /* Main Pastel Purple - slightly more vibrant but still soft */
+  --color-primary-dark: #8E75C0; /* Darker purple for strong text/hover */
+  --color-primary-light: #F0EDF6; /* Very light purple for subtle backgrounds */
+
+  --color-accent: #80CBC4;     /* Calming Pastel Teal/Mint for primary CTAs */
+  --color-accent-dark: #64B5F6; /* A slightly deeper pastel blue for some highlights */
+
+  --color-text-dark: #333333;   /* Dark charcoal for main headings */
+  --color-text-medium: #5C5C5C; /* Medium grey for body text */
+  --color-text-light: #999999;  /* Lighter grey for subtle text */
+
+  --color-background-white: #ffffff; /* Dominant pure white background */
+  --color-background-offwhite: #edecee; /* Very subtle off-white for layered elements */
+  
+  --color-border-light: #E0E0E0; /* Very light grey for subtle borders */
+  --color-border-purple: rgba(161, 136, 237, 0.3); /* Subtle purple border tint */
+
+  --color-shadow-subtle: rgba(0, 0, 0, 0.04); /* Very light and diffused shadow */
+  --color-shadow-medium: rgba(0, 0, 0, 0.08); /* Slightly more prominent shadow */
+}
+
+/* Basic Reset & Global Typography */
+body {
+  margin: 0;
+  font-family: 'Open Sans', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; /* Using Open Sans or similar for professional feel */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-background-white); /* Dominant white background */
+  color: var(--color-text-medium);
+  line-height: 1.65; /* Slightly more spacious line height */
+  font-size: 16px; /* Base font size */
+}
+
+/* Add Google Fonts if you use 'Open Sans' - you'd link this in public/index.html */
+/* <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"> */
+
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-dark);
+  margin-top: 0;
+  margin-bottom: 0.6em; /* Slightly more spacing */
+  font-weight: 700; /* Bolder headings for professionalism */
+}
+
+h1 { font-size: 3em; } /* Larger headings */
+h2 { font-size: 2.4em; }
+h3 { font-size: 1.9em; }
+
+/* Common Button Styles */
+button, .button {
+  display: inline-block;
+  padding: 15px 32px; /* More generous padding */
+  font-size: 1.15em;
+  font-weight: 600; /* Bolder button text */
+  color: var(--color-background-white);
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 12px; /* Even more rounded */
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Smoother transitions */
+  box-shadow: 0 6px 20px var(--color-shadow-subtle); /* Softer, larger shadow */
+  text-align: center;
+}
+
+button:hover, .button:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-4px); /* More pronounced lift */
+  box-shadow: 0 10px 25px var(--color-shadow-medium);
+}
+
+/* Accent Button for primary CTAs like "Book a Session" */
+.button-accent {
+  background-color: var(--color-accent);
+}
+
+.button-accent:hover {
+  background-color: var(--color-accent-dark);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px var(--color-shadow-medium);
+}
+
+/* Secondary Button Style (e.g., "View Profile") */
+.button-secondary {
+  background-color: transparent;
+  color: var(--color-primary-dark);
+  border: 1px solid var(--color-primary);
+  box-shadow: none;
+  padding: 13px 30px; /* Slightly adjusted padding for border */
+}
+
+.button-secondary:hover {
+  background-color: var(--color-primary-light); /* Light primary tint on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px var(--color-shadow-subtle);
+}
+
+/* Common Form Input Styles */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid var(--color-border-light); /* Very light border */
+  border-radius: 10px;
+  font-size: 1em;
+  box-sizing: border-box;
+  margin-top: 5px;
+  transition: all 0.3s ease;
+  background-color: var(--color-background-offwhite); /* Subtle off-white input background */
+  color: var(--color-text-dark);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(161, 136, 237, 0.25); /* Softer, wider focus glow */
+}
+
+label {
+  display: block;
+  margin-bottom: 6px; /* More margin */
+  color: var(--color-text-dark);
+  font-weight: 600;
+  font-size: 0.98em; /* Slightly adjusted size */
+}
+
+/* Card/Panel base styles */
+.card-panel {
+  background-color: var(--color-background-white);
+  border-radius: 18px; /* More rounded */
+  box-shadow: 0 12px 40px var(--color-shadow-subtle); /* Large, very soft shadow */
+  padding: 60px; /* More generous padding */
+  margin: 50px auto; /* More margin */
+}
+
+/* Link Styles (not buttons) */
+a {
+  color: var(--color-primary-dark);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-accent-dark);
+  text-decoration: underline;
+}
+
+/* Layout helpers */
+.text-center { text-align: center; }
+.margin-top-large { margin-top: 60px; }
+.flex-group { display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; } /* Increased gap */
+
+/* Utility for subtle dividers */
+.divider {
+    border-bottom: 1px solid var(--color-border-light);
+    margin: 25px 0;
+}
